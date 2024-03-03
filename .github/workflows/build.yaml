@@ -26,6 +26,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          push: true
           context: ./images/chrome/
           build-args: |-
             UPSTREAM_TAG=${{ env.UPSTREAM_TAG }}
